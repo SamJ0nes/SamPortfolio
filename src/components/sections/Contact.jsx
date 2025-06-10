@@ -14,7 +14,7 @@ function Contact() {
                     <img className="contactPic" src={SamPic} alt="Sam Jones" />
                 </div>
                 <div className="contactInfo">
-                    <h2>Contact Me / Get in Touch</h2>
+                    <h2>Contact Me</h2>
                     <p className='contactSubheading'>I'd love to hear from you!</p>
                     <div className='contactDetails'>
                         <div>
