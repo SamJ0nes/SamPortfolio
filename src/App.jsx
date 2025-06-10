@@ -52,6 +52,7 @@ function App() {
   const { scrollYProgress } = useScroll();
   const [atTop, setAtTop] = useState(true);
   const [atBottom, setAtBottom] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1100);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,6 +65,14 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1100);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -79,7 +88,8 @@ function App() {
 
           <main style={{ scrollBehavior: 'smooth' }}>
             <section id='home' style={sectionStyle}>
-              <DotCanvas spacing={25} maxDist={1000}></DotCanvas>
+              {/* Only use dot canvas on desktop screen sizes (too much processing power for mobiles) */}
+              {isDesktop && <DotCanvas spacing={25} maxDist={1000}></DotCanvas>}
               <div className='sectionContent'>
                 <Home />
               </div>
