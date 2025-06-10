@@ -11,17 +11,6 @@ import Contact from './components/sections/Contact'
 import { motion, useScroll } from "motion/react"
 import React, { useEffect, useState } from 'react'
 
-
-const sectionStyle = {
-  height: '100vh',
-  minHeight: '100vh',
-  minWidth: '60vw',
-  borderTop: '5px solid #444',
-  color: '#fff',
-  backgroundColor: '#2b2b2e',
-  position: 'relative',
-};
-
 function App() {
   const handleNextSection = (isDown) => {
     const sectionIds = ['home', 'about', 'experience', 'education', 'projects', 'contact'];
@@ -87,34 +76,34 @@ function App() {
         <div className='mainContainer'>
 
           <main style={{ scrollBehavior: 'smooth' }}>
-            <section id='home' style={sectionStyle}>
+            <section className='sections home' id='home' style={{height:'100vh'}}>
               {/* Only use dot canvas on desktop screen sizes (too much processing power for mobiles) */}
               {isDesktop && <DotCanvas spacing={25} maxDist={1000}></DotCanvas>}
               <div className='sectionContent'>
                 <Home />
               </div>
             </section>
-            <section id='about' style={sectionStyle}>
+            <section className='sections' id='about' >
               <div className='sectionContent'>
                 <About />
               </div>
             </section>
-            <section id='experience' style={sectionStyle}>
+            <section className='sections' id='experience' >
               <div className='sectionContent'>
                 <Experience />
               </div>
             </section>
-            <section id='education' style={sectionStyle}>
+            <section className='sections' id='education' >
               <div className='sectionContent'>
                 <Education />
               </div>
             </section>
-            <section id='projects' style={sectionStyle}>
+            <section className='sections' id='projects' >
               <div className='sectionContent'>
                 <Projects />
               </div>
             </section>
-            <section id='contact' style={sectionStyle}>
+            <section className='sections' id='contact' >
               <div className='sectionContent'>
                 <Contact />
               </div>

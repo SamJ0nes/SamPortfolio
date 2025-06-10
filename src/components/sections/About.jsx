@@ -9,7 +9,7 @@ import { boxVariantsLeft, boxVariantsRight, boxVariantsFade } from '../../motion
 const About = () => (
     <div className="aboutContainer">
         <div className='aboutHeaderContainer'>
-            <h2><span className='highlightWord'>About</span> Me</h2>
+            <h2>About Me</h2>
 
         </div>
         <div className='aboutContentContainer'>
@@ -22,7 +22,7 @@ const About = () => (
                     variants={boxVariantsLeft}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{amount: 0.5 }}
+                    viewport={{amount: 0.3 }}
                 >
                     <div className="careerHeaderInline">
                         <h3>What Am I pursuing For My Career?</h3>

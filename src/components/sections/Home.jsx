@@ -10,12 +10,22 @@ const Home = () => {
 
     return (
         <>
-            <motion.div className="homeContainer" variants={boxVariantsFade} initial="hidden" whileInView="visible" viewport={{amount: 0.1 }}>
+            <motion.div className="homeContainer" variants={boxVariantsFade} initial="hidden" whileInView="visible" viewport={{ amount: 0.1 }}>
                 <div className="columnsContainer">
                     <div className="leftColumn">
-                        <motion.div className="infoContainer" variants={boxVariantsLeft} initial="hidden" whileInView="visible" viewport={{amount: 0.5 }}>
+                        <motion.div className="infoContainer" variants={boxVariantsLeft} initial="hidden" whileInView="visible" viewport={{ amount: 0.5 }}>
                             <h1>_______________________</h1>
                             <h1>I'm <span className="highlightWord">Sam</span>, a Graduate Software Developer.</h1>
+                            <a
+                                href="#about"
+                                onClick={e => {
+                                    e.preventDefault();
+                                    const aboutSection = document.getElementById('about');
+                                    if (aboutSection) {
+                                        aboutSection.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            > read more...</a>
 
                         </motion.div>
                     </div>
@@ -27,24 +37,24 @@ const Home = () => {
                                 <img src={reactLogo} className="logo react" alt="React Logo"></img>
                             </a>
                         </div>
-                        <motion.div className="sideInfo" variants={boxVariantsRight} initial="hidden" whileInView="visible" viewport={{amount: 0.3 }}>
+                        <motion.div className="sideInfo" variants={boxVariantsRight} initial="hidden" whileInView="visible" viewport={{ amount: 0.3 }}>
                             <h2>First Class Graduate - Computing BSc Hons</h2>
                             <p style={{ fontStyle: "italic", fontSize: 17 }}>
-                                Studied a 4 year Computing course at Nottingham Trent University, including a year with an Industry Placement
+                                Studied a 4 year Computing course at Nottingham Trent University, including a year with an
                                 <a
                                     href="#about"
                                     onClick={e => {
                                         e.preventDefault();
-                                        const aboutSection = document.getElementById('about');
-                                        if (aboutSection) {
-                                            aboutSection.scrollIntoView({ behavior: 'smooth' });
+                                        const experienceSection = document.getElementById('experience');
+                                        if (experienceSection) {
+                                            experienceSection.scrollIntoView({ behavior: 'smooth' });
                                         }
                                     }}
-                                > read more...</a>
+                                > Industry Placement...</a>
                             </p>
                         </motion.div>
                         <div className="sideSocial">
-                            <h2 style={{float:"left"}}>Find me</h2>
+                            <h2 style={{ float: "left" }}>Find me</h2>
                             <a href="https://www.linkedin.com/in/sam-jones-88493b224/" target='_blank'>
                                 <img src={linkedInLogo} className="logo linkedIn" alt="LinkedIn Logo"></img>
                             </a>

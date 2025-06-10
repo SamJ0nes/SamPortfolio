@@ -92,9 +92,10 @@ const projects = [
 
 function Projects() {
     return (
-        <div className="projectOuter">
-            <div className="projectContainer">
-                <h2 className="projectTitle">My Personal & University <span className='highlightWord'>Projects</span></h2>
+        <div className="containerOuter" id="projects">
+            <div className="sectionContentContainer">
+                <h2 className="projectTitle">My Personal & University Projects</h2>
+                <small className='smallText'>* Click on the project names for video or repo code</small>
                 <div className="projectListScroll">
                     <ul className="projectList">
                         {(() => {
@@ -114,9 +115,10 @@ function Projects() {
                                             <a href={proj.link} target='_blank'>
                                                 <h3 className="projectName">
                                                     {proj.name}
-                                                    <span className="projectTechnology"> - {proj.technology}</span>
+                                                    
                                                 </h3>
                                             </a>
+                                            <span className="projectTechnology"> - {proj.technology}</span>
                                             <div className="projectPeriod">{proj.period}</div>
                                             <p className="projectDescription">{proj.description}</p>
                                             <div className="projectDetails">

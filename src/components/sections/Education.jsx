@@ -106,9 +106,9 @@ const Education = () => {
     const edu = educationData[activeTab];
 
     return (
-        <div className="educationOuter">
-            <div className="educationContainer">
-                <h2 className="educationTitle">My <span className='highlightWord'>Education</span></h2>
+        <div className="containerOuter">
+            <div className="sectionContentContainer">
+                <h2 className="educationTitle">My Education</h2>
                 <div className="educationTabs">
                     {tabOptions.map(tab => (
                         <button
@@ -125,7 +125,7 @@ const Education = () => {
                         <div className="eduInfoRow">
                             <div className="eduInfoCol">
                                 <h3 className="educationInstitution">{edu.title}</h3>
-                                <div className="educationDegree">{edu.degree}</div>
+                                <div className="educationDegree"><strong>{edu.degree}</strong></div>
                                 <div className="educationPeriod">{edu.period}</div>
                             </div>
                         </div>
