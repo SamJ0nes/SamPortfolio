@@ -1,0 +1,115 @@
+.aboutContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  text-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  overflow-y: auto;
+}
+
+.aboutHeaderContainer {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.aboutContentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.samPicContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 80vh;
+}
+
+.samPic {
+  height: 100%;
+  width: auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+
+}
+
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.aboutBox {
+  background: rgba(44,44,50,0.85);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  min-width: 320px;
+  max-width: 500px;
+  align-self: center;
+}
+
+.logo.ntu {
+  width: 80px;
+  height: auto;
+  position: static;
+  padding: 0px;
+  margin-left: 10px;
+  transition: filter 300ms;
+}
+
+.logo.ntu:hover {
+  filter: drop-shadow(0 0 2em #E50278);
+}
+
+.careerHeaderInline {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+@media screen and (max-width: 1500px) {}
+
+@media screen and (max-width: 1100px) {
+  .aboutContainer {
+    display: block;
+  }
+
+  .samPicContainer {
+    display: none;
+  }
+
+  .boxContainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutBox {
+    margin-top: 10rem;
+    max-width: 700px;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .boxContainer {
+    gap: 3rem;
+  }
+
+  .aboutBox {
+    margin-top: 0rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+}

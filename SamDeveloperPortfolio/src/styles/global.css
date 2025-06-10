@@ -1,0 +1,59 @@
+.highlightWord {
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.custom-icon {
+  margin-right: 0.7em;
+  color: #61dafb;
+}
+
+a {
+  font-weight: 500;
+  color: #61dafb;
+  text-decoration: inherit;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #30a1c0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h3 {
+  margin: 0rem;
+}
+
+h4 {
+  margin-bottom: 0.3em;
+  font-size: 1.08em;
+}
+
+p {
+  margin: 0rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

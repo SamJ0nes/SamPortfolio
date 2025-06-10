@@ -1,0 +1,233 @@
+.educationOuter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.educationContainer {
+    width: 66%;
+    height: 90%;
+    background: rgba(30, 30, 35, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.educationTitle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.educationTabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.educationTab {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    border-bottom: 2.5px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+    font-weight: 500;
+    outline: none;
+}
+
+.educationTab.active {
+    color: #61dafb;
+    border-bottom: 2.5px solid #61dafb;
+}
+
+.educationContent {
+    background: rgba(44, 44, 50, 0.85);
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    overflow-y: auto;
+}
+
+.educationInstitution {
+    color: #61dafb;
+    margin-bottom: 0.3rem;
+    font-size: 1.2em;
+}
+
+.educationDegree {
+    font-size: 1.05em;
+    margin-bottom: 0.5rem;
+}
+
+.educationPeriod {
+    font-size: 0.95em;
+    color: #bbb;
+    margin-bottom: 0.7rem;
+}
+
+.educationDetails {
+    font-size: 0.97em;
+    color: #b5b5c2;
+    margin: 0;
+    padding-left: 1.2em;
+    /* Add for side-by-side look */
+    flex: 1;
+}
+
+.eduYearSection {
+    margin-bottom: 2rem;
+    /* For grid layout */
+    width: 100%;
+}
+
+.eduModulesTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0.5rem;
+    background: rgba(36, 36, 42, 0.95);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.eduModulesTable th,
+.eduModulesTable td {
+    padding: 0.7em 1em;
+    text-align: left;
+}
+
+.eduModulesTable th {
+    background: #23232a;
+    color: #61dafb;
+    font-weight: 600;
+    font-size: 1em;
+    border-bottom: 2px solid #444;
+}
+
+.eduModulesTable td {
+    color: #e0e0e0;
+    background: transparent;
+    border-bottom: 1px solid #333;
+    font-size: 0.98em;
+}
+
+.eduModulesTable tr:last-child td {
+    border-bottom: none;
+}
+
+.eduModulesTable tr:hover td {
+    background: rgba(97, 218, 251, 0.07);
+}
+
+/* Grid for tables: 2-across on large screens */
+.eduTablesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.eduInfoRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.eduInfoCol {
+    min-width: 220px;
+    max-width: 320px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .eduInfoRow {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .eduInfoCol {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .educationContainer {
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    .educationContent {
+        padding: 1rem 1rem;
+    }
+
+    .eduTablesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .educationOuter {
+        align-items: flex-start;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .educationContainer {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 0.5rem;
+        box-shadow: none;
+    }
+
+    .educationTitle {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .educationTabs {
+        gap: 0.5rem;
+    }
+
+    .educationContent {
+        padding: 0.7rem 0.7rem;
+        border-radius: 7px;
+    }
+
+    .educationInstitution {
+        font-size: 1.05rem;
+    }
+
+    .educationDegree,
+    .educationPeriod,
+    .educationDetails {
+        font-size: 0.97em;
+    }
+
+    .eduTablesGrid {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+}
+
+.eduOverallRow td {
+    background: #23232a;
+    color: #61dafb;
+    font-weight: bold;
+    text-align: center;
+    border-top: 2px solid #61dafb;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+    padding-top: 1em;
+}
