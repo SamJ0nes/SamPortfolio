@@ -1,22 +1,10 @@
-# React + Vite
+## Overview
+This repository contains the code for my developer portfolio website found at **_https://samj0nes.github.io/SamPortfolio/_**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Summary
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-
-start up for dev:
-powershell:
-"Set-ExecutionPolicy RemoteSigned -Scope CurrentUser" or "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned"
-in terminal:
-cd VSCodeProjects\SamDeveloperPortfolio\SamDeveloperPortfolio
-npm run dev
-
-nav to "http://localhost:5173/"
+* **React.JS**
+* **Vite**
+* **JavaScript**
+* **HTML**
+* **CSS**
